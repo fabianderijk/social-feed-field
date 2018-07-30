@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains social_feed_field.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function social_feed_field_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the social_feed_field module.
+    case 'help.page.social_feed_field':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Social feeds integration, this module by itself doesn&#039;t do much. Always enable on of the submodules or create your own.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function social_feed_field_theme() {
+  return [
+    'social_feed_field' => [
+      'render element' => 'children',
+    ],
+  ];
+}

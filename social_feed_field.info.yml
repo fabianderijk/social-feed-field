@@ -1,0 +1,5 @@
+name: 'Social Feed Field'
+type: module
+description: 'Social feeds integration, this module by itself doesn't do much. Always enable on of the submodules or create your own.'
+core: 8.x
+package: 'Fields'
